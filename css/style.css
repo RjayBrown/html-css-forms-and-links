@@ -1,0 +1,278 @@
+/*******************************************/
+/*              BASE STYLES                */
+/*******************************************/
+
+* {
+font-family: "Ubuntu";
+box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+/*******************************************/
+/*             PAGE CONTAINERS             */
+/*******************************************/
+
+header,
+footer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	padding: 0 10px;
+
+	background-color: black;
+	color: white;
+}
+
+header {
+	justify-content: space-between;
+	height: 75px;
+}
+
+.main-container {
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: 1fr;
+	justify-content: center;
+	align-items: center;
+
+	margin: 0 auto;
+}
+
+/*
+BACKGROUND IMAGES
+-----------------
+The background image and how it is displayed within the element can be set using the 'background-image' and 'background-size' properties.
+
+SEARCH & APPLY
+  - CSS background properties
+  - CSS display property
+  - Viewport Units
+
+MDN web docs are a great resource to learn more!
+*/
+
+.img-container {
+	background-image: url('../image.jpg');
+	background-size: cover;
+
+	height: 30vh;
+
+	background-color: #162d10;
+}
+
+.wide {
+	display: none;
+}
+
+.img-container img {
+	height: 80vh;
+	margin: 0;
+}
+
+footer {
+	justify-content: center;
+
+	height: 120px;
+
+	margin: 0;
+}
+
+@media screen and (min-width: 451px) {
+	.mobile {
+		height: 50vh;
+	}
+}
+
+@media screen and (min-width: 781px) {
+	.main-container {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.wide {
+		display: initial;
+
+		height: 75vh;
+	}
+
+	.mobile {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1441px) {
+	.main-container {
+		max-width: 1440px;
+	}
+}
+
+/*******************************************/
+/*             FORM | BUTTONS              */
+/*******************************************/
+
+.form-container,
+form {
+	width: 95%;
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+
+	margin: 5px auto;
+}
+
+form {
+	padding: 10px;
+	border: 3px solid #26521c;
+	border-radius: 3px;
+}
+
+.form-title {
+	text-decoration: underline;
+	text-underline-offset: 5px;
+}
+
+.input-container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+
+	margin: 5px auto 10px auto;
+	padding: 5px;
+}
+
+.input-label {
+	text-align: left;
+	margin-bottom: 5px;
+}
+
+.input-field {
+	padding: 5px;
+	border: 1px solid #26521c;
+
+	border-radius: 3px;
+}
+
+.file {
+	margin: 0 auto;
+}
+
+.color-selector {
+	margin: 0 auto;
+}
+
+.checkbox-container {
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: 1fr 1fr;
+	justify-content: center;
+	align-items: center;
+}
+
+.radio-container {
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.checkbox,
+.radio {
+	margin: 5px auto;
+}
+
+.start-btn,
+.nav-btn,
+.form-btn {
+	margin: 0 auto;
+	padding: 5px 10px;
+
+	background-color: #26521c;
+	border: 1px solid #26521c;
+	border-radius: 3px;
+
+	color: white;
+
+	transition: all .2s linear;
+}
+
+.nav-btn {
+	margin: 0 5px;
+}
+
+/*
+PSEUDO-CLASSES (Buttons & Links)
+--------------------------------
+The CSS pseudo-classes below are typically used for buttons and links. The user takes an action, causing a change in the element's state that can be targeted for styling.
+
+  - :hover - used to modify the styling when the cursor is hovering over an element
+  - :active - used to modify the styling when the element is clicked
+
+SEARCH & APPLY
+  - CSS Pseudo-Classes (for user actions)
+  - CSS Transitions
+
+MDN is a great resource to learn more!
+*/
+
+.start-btn:hover,
+.nav-btn:hover,
+.form-btn:hover {
+	border: 1px solid #162d10;
+	background-color: #162d10;
+	border-radius: 3px;
+}
+
+.start-btn:active,
+.nav-btn:active,
+.form-btn:active {
+	border: 1px solid #222322;
+	background-color: #222322;
+	border-radius: 3px;
+}
+
+.start-btn {
+	font-size: 1.5rem;
+}
+
+.form-btn {
+	width: 60%;
+}
+
+/*******************************************/
+/*                TEXT STYLES              */
+/*******************************************/
+
+a {
+	list-style: none;
+	text-decoration: none;
+
+	margin: 0 10px;
+
+	color: inherit;
+}
+
+.big-text {
+	text-align: center;
+	font-size: 2.5rem;
+
+	margin: 25px auto;
+	padding: 0 20px;
+}
+
+@media screen and (min-width: 781px) {
+	.big-text {
+		text-align: center;
+		font-size: 2.75rem;
+
+		margin: 25px auto;
+	}
+}

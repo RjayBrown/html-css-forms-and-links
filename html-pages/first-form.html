@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Importing Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Linking CSS File -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Practice | Forms, Links & More Styles</title>
+</head>
+
+<body>
+    <header>
+        <!--
+    USING ANCHOR TAGS TO CREATE LINKS
+    ---------------------------------
+    Anchor tags are incredibly useful! They are used to add links to words, create buttons, or even add links to entire elements!
+
+    Links are created with the <a> tag and allow the user to visit a url or path specified in the 'href' attribute. This can be helpful for navigation to a new website, a different section on th e current page, or a seperate page within the same site (see example below).
+
+    -->
+        <a href="./index.html">
+            <h1>Header</h1>
+        </a>
+        <section class="btn-container">
+            <a href="./next-form.html" class="nav-btn">
+                Next Form
+            </a>
+            <a href="./index.html" class="nav-btn">
+                Home
+            </a>
+        </section>
+    </header>
+    <main class="main-container">
+        <section class="big-text">
+            <h1>Please fill out this form</h1>
+        </section>
+        <section class="form-container">
+            <!--
+        BUILDING FORMS
+        --------------
+        Forms are how users can interact with a website to submit information. Take a look at the different input types and how they are displayed in the browser.
+
+        FORM ACCESSIBILITY
+          - The <label> tag connects to the user input field when the 'for' attribute matches the 'name' or 'id' attribute of the <input> tag. (see examples below)
+          - This connection increases the input touch/clickable area and helps assistive technologies like screen readers recognize the input field to inform the user of what information is required.
+
+        INPUT TYPES (Used in this form)
+          - Text
+          - Email
+          - Password
+          - File Upload
+          - Color
+          - Submit
+
+        SEARCH & APPLY
+        Forms: Number Inputs
+          - The forms do not include number inputs. You may need to create one for your project, so you can use your searching skills to find out how!
+
+        -->
+            <form action="#">
+                <h1 class="form-title">First Form</h1>
+                <div class="input-container">
+                    <label for="username" class="input-label">Username</label>
+                    <input class="input-field" type="text" name="username" placeholder="First Name">
+                </div>
+                <div class="input-container">
+                    <label for="email" class="input-label">Email</label>
+                    <input class="input-field" type="email" name="email" placeholder="Email">
+                </div>
+                <div class="input-container">
+                    <label for="password" class="input-label">Enter password</label>
+                    <input class="input-field txt" type="password" name="password" placeholder="Enter Password">
+                </div>
+                <div class="input-container">
+                    <label for="password" class="input-label">Confirm password</label>
+                    <input class="input-field" type="password" name="password2" placeholder="Confirm Password">
+                </div>
+                <div class="input-container">
+                    <label for="profile-picture">Profile Picture</label>
+                    <input class="input-field file" type="file" id="profile-picture">
+                </div>
+                <div class="input-container">
+                    <label for="color">Favorite Color</label>
+                    <input type="color" name="color" class="color-selector">
+                </div>
+                <input class="form-btn" type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h1>Footer</h1>
+    </footer>
+</body>
+
+</html>
