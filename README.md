@@ -5,7 +5,7 @@
   <a href="">
     <img src="screenshots/project-logo.png" alt="project-name" height="64">
   </a>
-<h1 align="center">Forms, Links, & More CSS Styles</h1>
+<h1 align="center">Forms + Links<br> & <br>More CSS Styles</h1>
 <h4>Learn about building forms and using anchor tags to make websites more interactive and accessible</h4>
 </div>
 
